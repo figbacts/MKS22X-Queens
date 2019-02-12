@@ -94,14 +94,14 @@ public static int helper2(QueenBoard test, int [][] board, int col){
     }
     return ans;
 }
-public static void main(String[] args){
-QueenBoard test = new QueenBoard(5);
-System.out.println(test.countSolutions());
+//public static void main(String[] args){
+//QueenBoard test = new QueenBoard(5);
+//System.out.println(test.countSolutions());
 //System.out.println(test.solve());
 //test.addQueen(0,0);
 //test.addQueen(0,1);
 //test.removeQueen(0,0);
 
-System.out.println(test);
-}
+//System.out.println(test);
+//}
 }

@@ -12,14 +12,11 @@ public class QueenBoard{
     for (int h = c + 1; h < board[r].length; h ++){
       board[r][h] = board[r][h] + 1;
       if (r+h-c < board.length){
-        if (board[r+h-c][h] == 0){
         board[r + h - c][h] += 1;
     }
-  }
+
       if(r - h  +c > -1 ){
-        if (board[r-h+c][h] == 0){
         board[r - h + c][h] += 1;
-    }
     }
   }
     return true;
@@ -35,10 +32,8 @@ public class QueenBoard{
     for (int h = c + 1; h < board[r].length; h ++){
       board[r][h] = board[r][h] -1;
       if (r+h-c < board.length){
-        if(board[r + h - c][h] != -1){
         board[r + h - c][h] -= 1;
       }
-    }
       if(r - h  +c > -1 ){
         board[r - h + c][h] -= 1;
     }
@@ -101,8 +96,8 @@ public static int helper2(QueenBoard test, int [][] board, int col){
 }
 public static void main(String[] args){
 QueenBoard test = new QueenBoard(5);
-//System.out.println(test.countSolutions());
-System.out.println(test.solve());
+System.out.println(test.countSolutions());
+//System.out.println(test.solve());
 //test.addQueen(0,0);
 //test.addQueen(0,1);
 //test.removeQueen(0,0);

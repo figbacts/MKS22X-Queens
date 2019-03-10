@@ -57,6 +57,13 @@ public class QueenBoard{
     return ans;
   }
   public boolean solve(){
+    for (int row = 0; row < board.length; row ++) {
+      for (int col = 0; col < board[row].length; col ++) {
+        if (board[row][col] != 0) {
+          throw new IllegalStateException("Invalid Board");
+        }
+      }
+    }
     return helper1(this,board,0);
   }
   public static boolean helper1(QueenBoard test, int[][] board, int col){
@@ -77,6 +84,13 @@ public class QueenBoard{
   return false;
 }
 public int countSolutions(){
+  for (int row = 0; row < board.length; row ++) {
+    for (int col = 0; col < board[row].length; col ++) {
+      if (board[row][col] != 0) {
+        throw new IllegalStateException("Invalid Board");
+      }
+    }
+  }
   return helper2(this,board,0);
 }
 public static int helper2(QueenBoard test, int [][] board, int col){

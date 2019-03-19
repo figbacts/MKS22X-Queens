@@ -57,6 +57,13 @@ public class QueenBoard{
     return ans;
   }
   public boolean solve(){
+    for (int row = 0; row < board.length; row ++) {
+      for (int col = 0; col < board[row].length; col ++) {
+        if (board[row][col] != 0) {
+          throw new IllegalStateException("Invalid Board");
+        }
+      }
+    }
     return helper1(this,board,0);
   }
   public static boolean helper1(QueenBoard test, int[][] board, int col){
@@ -77,6 +84,13 @@ public class QueenBoard{
   return false;
 }
 public int countSolutions(){
+  for (int row = 0; row < board.length; row ++) {
+    for (int col = 0; col < board[row].length; col ++) {
+      if (board[row][col] != 0) {
+        throw new IllegalStateException("Invalid Board");
+      }
+    }
+  }
   return helper2(this,board,0);
 }
 public static int helper2(QueenBoard test, int [][] board, int col){
@@ -94,7 +108,35 @@ public static int helper2(QueenBoard test, int [][] board, int col){
     }
     return ans;
 }
+<<<<<<< HEAD
 public static void main(String[] args){
+=======
+public static void runTest(int i){
+  QueenBoard b;
+  int[]tests =   {1,2,3,4,5,8};
+  int[]answers = {1,0,0,2,10,92};
+  if(i >= 0 && i < tests.length ){
+    int size = tests[i];
+    int correct = answers[i];
+    b = new QueenBoard(size);
+    int ans  = b.countSolutions();
+
+    if(correct==ans){
+      System.out.println("PASS board size: "+tests[i]+" "+ans);
+    }else{
+      System.out.println("FAIL board size: "+tests[i]+" "+ans+" vs "+correct);
+    }
+  }
+}
+
+public static void main(String[] args){
+  //runTest(0);
+  //runTest(1);
+  //runTest(2);
+  //runTest(3);
+  //runTest(4);
+  //runTest(5);
+>>>>>>> ec051f40a70ed673c27238bc17d556e0987c6135
 //QueenBoard test = new QueenBoard(5);
 //System.out.println(test.countSolutions());
 //System.out.println(test.solve());

@@ -65,8 +65,8 @@ public class QueenBoard{
   }
   for(int r = 0; r < board.length; r ++){
     if (test.addQueen(r,col)){
-      System.out.println(Text.go(1,1));
-      System.out.println(test);Text.wait(500); //adjust this delays
+      //System.out.println(Text.go(1,1));
+      //System.out.println(test);Text.wait(500); //adjust this delays
       if (helper1(test,board,col+1)){
         return true;
       }
@@ -94,7 +94,7 @@ public static int helper2(QueenBoard test, int [][] board, int col){
     }
     return ans;
 }
-//public static void main(String[] args){
+public static void main(String[] args){
 //QueenBoard test = new QueenBoard(5);
 //System.out.println(test.countSolutions());
 //System.out.println(test.solve());
@@ -103,5 +103,5 @@ public static int helper2(QueenBoard test, int [][] board, int col){
 //test.removeQueen(0,0);
 
 //System.out.println(test);
-//}
+}
 }
